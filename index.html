@@ -562,6 +562,26 @@ footer .credit {
   color: var(--text-3);
   font-weight: 500;
 }
+
+/* ---- Token stat ---- */
+.token-stat {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: var(--space-3);
+  font-family: 'Space Grotesk', sans-serif;
+}
+.token-num {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+.token-label {
+  font-size: 13px;
+  color: var(--text-3);
+  font-weight: 500;
+}
 </style>
 </head>
 <body>
@@ -761,7 +781,11 @@ footer .credit {
   <div class="container">
     <div class="giant">AI</div>
     <div class="badge">🤖 Built by an AI coding agent</div>
-    <p class="credit">Directed by Amogha · This entire page was written by an AI, not a human.</p>
+        <div class="token-stat">
+      <span class="token-num">28.5M</span>
+      <span class="token-label">tokens spent together this year</span>
+    </div>
+<p class="credit">Directed by Amogha · This entire page was written by an AI, not a human.</p>
   </div>
 </footer>
 
