@@ -582,6 +582,123 @@ footer .credit {
   color: var(--text-3);
   font-weight: 500;
 }
+
+/* ---- Cost comparison ---- */
+.cost-compare {
+  padding: var(--space-6) 0;
+  background: var(--bg);
+  border-top: 1px solid var(--line);
+}
+.cost-compare h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 600;
+  line-height: 1.15;
+  margin-bottom: var(--space-2);
+}
+.cost-compare .intro {
+  color: var(--text-2);
+  font-size: 1.1rem;
+  margin-bottom: var(--space-5);
+  max-width: 560px;
+}
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  align-items: center;
+  margin-bottom: var(--space-5);
+}
+.compare-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--space-5) var(--space-4);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.compare-card:hover { transform: translateY(-4px); }
+.compare-paid {
+  border-color: #F5C6C0;
+  background: linear-gradient(135deg, #FFF5F3, #FDECEA);
+}
+.compare-free {
+  border-color: #C8E6C9;
+  background: linear-gradient(135deg, #F1F8F1, #E8F5E9);
+}
+.compare-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-3);
+  margin-bottom: var(--space-3);
+}
+.compare-amount {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: var(--space-2);
+}
+.paid-amount { color: var(--danger); }
+.free-amount { color: var(--ok); }
+.compare-detail {
+  font-size: 14px;
+  color: var(--text-2);
+  margin-bottom: var(--space-3);
+}
+.compare-emoji {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-2);
+  animation: bounce 2s ease-in-out infinite;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.compare-sub {
+  font-size: 14px;
+  color: var(--text-2);
+  line-height: 1.5;
+  max-width: 280px;
+  margin: 0 auto;
+}
+.compare-vs {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-3);
+  text-align: center;
+  padding: var(--space-2) 0;
+}
+.savings {
+  text-align: center;
+  padding: var(--space-5) var(--space-4);
+  background: var(--accent-soft);
+  border-radius: var(--radius);
+  border: 2px dashed var(--accent);
+}
+.savings-num {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: var(--space-2);
+}
+.savings-text {
+  font-size: 1.1rem;
+  color: var(--text-2);
+  max-width: 400px;
+  margin: 0 auto;
+}
+@media (min-width: 640px) {
+  .compare-grid { grid-template-columns: 1fr auto 1fr; }
+  .compare-vs { padding: 0 var(--space-3); }
+}
 </style>
 </head>
 <body>
@@ -777,6 +894,35 @@ footer .credit {
 </section>
 
 <!-- Footer -->
+<!-- Cost comparison -->
+<section class="cost-compare">
+  <div class="container">
+    <h2 class="reveal">What would this have cost?</h2>
+    <p class="intro reveal reveal-delay-1">28.5 million tokens. That is a LOT of AI. Here is what it would have cost you... and what it actually cost.</p>
+    <div class="compare-grid">
+      <div class="compare-card compare-paid reveal">
+        <div class="compare-label">If you paid for GPT-6 Astra</div>
+        <div class="compare-amount paid-amount">$427</div>
+        <div class="compare-detail">at ~$15 per 1M tokens</div>
+        <div class="compare-emoji">??</div>
+        <div class="compare-sub">That is a phone. A nice dinner. A flight ticket. Gone.</div>
+      </div>
+      <div class="compare-vs reveal reveal-delay-1">VS</div>
+      <div class="compare-card compare-free reveal reveal-delay-2">
+        <div class="compare-label">What it cost you with zyvo</div>
+        <div class="compare-amount free-amount">$0</div>
+        <div class="compare-detail">completely free</div>
+        <div class="compare-emoji">??</div>
+        <div class="compare-sub">Every single token. Every project. Every conversation. Free.</div>
+      </div>
+    </div>
+    <div class="savings reveal reveal-delay-3">
+      <div class="savings-num">$427 saved</div>
+      <div class="savings-text">That is money you keep in your pocket. Every month. Forever.</div>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="container">
     <div class="giant">AI</div>
