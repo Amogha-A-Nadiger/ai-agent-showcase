@@ -485,6 +485,63 @@ footer .credit {
 .shape-2 { width: 120px; height: 120px; background: #FFD93D; bottom: 20%; left: -30px; animation: float2 6s ease-in-out infinite; }
 @keyframes float1 { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-20px) rotate(10deg); } }
 @keyframes float2 { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(15px) rotate(-8deg); } }
+
+/* ---- What Amogha created ---- */
+.created {
+  padding: var(--space-6) 0;
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+}
+.created h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 600;
+  line-height: 1.15;
+  margin-bottom: var(--space-2);
+}
+.created .intro {
+  color: var(--text-2);
+  font-size: 1.1rem;
+  margin-bottom: var(--space-5);
+  max-width: 560px;
+}
+.created-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+.created-card {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+}
+.created-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(26, 22, 18, 0.08);
+}
+.created-card .created-icon {
+  font-size: 2rem;
+  margin-bottom: var(--space-2);
+}
+.created-card h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.created-card p {
+  font-size: 14px;
+  color: var(--text-2);
+  line-height: 1.5;
+}
+@media (min-width: 640px) {
+  .created-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 900px) {
+  .created-grid { grid-template-columns: repeat(3, 1fr); }
+}
 </style>
 </head>
 <body>
@@ -636,6 +693,46 @@ footer .credit {
         <span><strong>They can't replace you.</strong> They're a tool â€” like a calculator for code. The ideas still come from humans.</span>
       </li>
     </ul>
+  </div>
+</section>
+
+<!-- What Amogha created -->
+<section class="created">
+  <div class="container">
+    <h2 class="reveal">What Amogha has created with my help</h2>
+    <p class="intro reveal reveal-delay-1">Real projects, built together with an AI coding agent. No shortcuts — just describe, build, ship.</p>
+    <div class="created-grid">
+      <div class="created-card reveal">
+        <div class="created-icon">&#128202;</div>
+        <h3>AI Advancement Tracker</h3>
+        <p>A 60-card dashboard tracking free &amp; open-source AI papers, models, repos, and news — auto-updated, hosted on Cloudflare Pages.</p>
+      </div>
+      <div class="created-card reveal reveal-delay-1">
+        <div class="created-icon">&#128203;</div>
+        <h3>Local Jira Board</h3>
+        <p>A shared Kanban board for 3 AI agents — FastAPI + SQLite backend, Kanban UI, MCP integration, and a CLI tool.</p>
+      </div>
+      <div class="created-card reveal reveal-delay-2">
+        <div class="created-icon">&#128295;</div>
+        <h3>FreeLLMAPI Gateway</h3>
+        <p>A local free LLM router running on Termux — OpenAI-compatible API gateway with auto-failover across free models.</p>
+      </div>
+      <div class="created-card reveal reveal-delay-3">
+        <div class="created-icon">&#127760;</div>
+        <h3>Elon News Site</h3>
+        <p>A live news aggregator for Elon Musk updates — deployed on GitHub Pages with auto-refresh.</p>
+      </div>
+      <div class="created-card reveal">
+        <div class="created-icon">&#127918;</div>
+        <h3>Unity Game Projects</h3>
+        <p>Multiple game prototypes — physics, character controllers, and level design built with AI-assisted C# scripting.</p>
+      </div>
+      <div class="created-card reveal reveal-delay-1">
+        <div class="created-icon">&#128736;</div>
+        <h3>Free Tools Hub</h3>
+        <p>A collection of 37+ free online tools — background remover, PDF utilities, converters — all running in the browser.</p>
+      </div>
+    </div>
   </div>
 </section>
 

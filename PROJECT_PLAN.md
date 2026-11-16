@@ -17,18 +17,18 @@ CRAFT (ADVANCE) — full design + self-test + polish
 - [x] 8. UI Design System
 - [x] 9. Technical Spec
 - [x] 10. Build Plan
-- [ ] 11. Implementation (index.html)
-- [ ] 12. Testing (self-verify gate)
-- [ ] 13. Responsive
+- [x] 11. Implementation (index.html)
+- [x] 12. Testing (self-verify gate)
+- [x] 13. Responsive
 - [ ] 14. Security (N/A — static)
-- [ ] 15. Performance
-- [ ] 16. Accessibility
-- [ ] 17. SEO
+- [x] 15. Performance
+- [x] 16. Accessibility
+- [x] 17. SEO
 - [ ] 18. User Acceptance
 - [ ] 19. Iterate
 - [ ] 19b. Customization Round
-- [ ] 20. Pre-Launch
-- [ ] 21. Deploy
+- [x] 20. Pre-Launch
+- [x] 21. Deploy
 - [ ] 22. Post-Launch
 
 ## Key Decisions
